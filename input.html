@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/css.css" />
+		<style>
+			tr td.field {
+			    width: 340px;
+			    text-align: right;
+			}
+			table tr td {
+			    padding: 10px 5px;
+			}
+			table tr td input.txtbox {
+			    border: 1px solid #ccc;
+			    padding: 7px 5px;
+			    line-height: 24px;
+			   
+			    width: 294px;
+			}
+			table tr td input.txtbox-short {
+			    width: 204px;
+			    float: left;
+			}
+			table tr td input.sso-get-vcode {
+			    width: 83px;
+			    height: 35px;
+			    line-height: 35px;
+			    border: 1px solid #a8a8a8;
+			    margin: 2px 0 0 10px;
+			    border-radius: 5px;
+			    color: #666;
+			    outline: none;
+			    background-color: #fcfcfc;
+			    background: -webkit-gradient(linear,0% 0%,0% 100%,from(#fcfcfc),to(#e7e7e7));
+			    background: -webkit-linear-gradient(top,#fcfcfc,#e7e7e7);
+			    background: -moz-linear-gradient(top,#fcfcfc,#e7e7e7);
+			    background: -ms-linear-gradient(top,#fcfcfc,#e7e7e7);
+			    background: -o-linear-gradient(top,#fcfcfc,#e7e7e7);
+			}
+			table tr td img.sso-verify-code {
+			    width: 80px;
+			    height: 40px;
+			    float: left;
+			    margin-left: 10px;
+			}
+			
+			table tr td span.info {
+			    color: #808080;
+			}
+			table tr td span.info-msg {
+			    color: #808080;
+			}
+			table tr td span.error-msg {
+			    font-size: 14px;
+			    color: #e4393c;
+			    display: none;
+			}
+			table tr td span.error-msg i {
+			    display: inline-block;
+			    width: 15px;
+			    height: 15px;
+			    background-position: -4px -4px;
+			    margin-right: 4px;
+			    font-size: 14px;
+			    color: #e4393c;
+			}
+
+			table tr td span.right-msg i {
+			    display: inline-block;
+			    width: 15px;
+			    height: 15px;
+			    background-position: -4px -182px;
+			    margin-right: 4px;
+			}
+			
+			table tr td a.sso-icon-refresh {
+			    display: inline-block;
+			    height: 24px;
+			    line-height: 24px;
+			    background-position: 100% -129px;
+			    padding-right: 24px;
+			    color: #1077d7;
+			}
+			
+			table tr td a.sso-link {
+		    	color: #1077d7;
+			}
+   			table tr td a.sso-btn-submit {
+			    width: 237px;
+			    height: 45px;
+			    line-height: 45px;
+			    background: #e4393c;
+			    border-radius: 5px;
+			    color: #fff;
+			    display: inline-block;
+			    text-align: center;
+			    font-size: 18px;
+			}
+			
+			table tr td.middle *{
+			    display: inline-block;
+    			vertical-align: middle;
+			}
+			
+			.input_content{
+				width: 50%;
+				margin:  20px auto;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--name、type、placeholder maxlength
+			注册是a标签，btn是input：button
+		-->
+        <table>
+            <tbody>
+            	<tr>
+	                <td class="field">手机号：</td>
+	                <td><input  name="mobile" type="text" class="txtbox"></td>
+	                <td>
+	                    <span class="info-msg "><i ></i><span>请输入有效的11位手机号</span></span>
+	                    <span class="error-msg "><i ></i><span></span></span>
+	                    <span class="right-msg "><i ></i><span>&nbsp;</span></span>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td class="field">验证码：</td>
+	                <td class="clearfix">
+	                    <input name="vertifyCode" type="text" class="txtbox txtbox-short">
+	                    <img src="https://sso.jrj.com.cn/register/service/create" alt="" class="sso-verify-code">
+	                </td>
+	                <td>
+	                    <span class="info">看不清？</span>
+	                    <a href="javascript:void(0);" class="sso-icon-refresh">换一张</a>
+	                    <span class="right-msg "><i ></i><span>&nbsp;</span></span>
+	                    <span class="error-msg "><i ></i><span></span></span>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td class="field">短信验证码：</td>
+	                <td class="clearfix">
+	                    <input  name="verifyCode" type="text" class="txtbox txtbox-short">
+	                    <input  type="button" value="获取验证码" class="sso-get-vcode">
+	                </td>
+	                <td>
+	                    <a  href="javascript:void(0);" class="sso-link" >语音验证码</a>
+	                    <span class="info-msg " style="margin-left:5px;"><i ></i><span>未收到短信？试试语言验证码</span></span>
+	                    <span class="info-msg " style="margin-left:5px;">您将收到语音来电，请接听</span>
+						<span class="right-msg "><i ></i><span>&nbsp;</span></span>
+	                    <span class="error-msg "><i ></i><span></span></span>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td class="field">密码：</td>
+	                <td><input name="password1" type="password" class="txtbox" ></td>
+	                <td>
+						<span class="info-msg "><i ></i><span>6-20个字符，不区分大小写</span></span>
+	                    <span class="right-msg "><i ></i><span>&nbsp;</span></span>
+	                    <span class="error-msg "><i ></i><span></span></span>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td class="field">确认密码：</td>
+	                <td><input name="password2" type="password" class="txtbox"></td>
+	                <td>
+	                    <span class="right-msg "><i ></i><span>&nbsp;</span></span>
+	                    <span class="error-msg "><i ></i><span></span></span>
+	                </td>
+	            </tr>
+	            <tr>
+	                <td class="field">&nbsp;</td>
+	                <td class="middle">
+						<div style="display: block;padding-bottom: 15px;">
+	                        <span class="error-msg "><i ></i><span></span></span>
+	                    </div>
+	                    <input type="checkbox" checked>
+	                    <span class="note">我已阅读并同意</span>
+	                    <a href="" target="_blank" class="sso-link">《金融界网站服务协议》</a>
+	                </td>
+	                <td>&nbsp;</td>
+	            </tr>
+	            <tr>
+	                <td class="field">&nbsp;</td>
+	                <td>
+	                    <a href="" class="sso-btn-submit">立即注册</a>
+	                </td>
+	                <td>&nbsp;</td>
+	            </tr>
+	        </tbody>
+        </table>
+       
+       <div class="input_content">
+        	<input type="radio" name="sex" />nan
+	        <input type="radio" name="sex" />nv
+	        <br />
+	        
+	        <input type="checkbox" name="company1" />yisheng
+	        <input type="checkbox" name="company2" />yisheng
+	        <br />
+	        
+	        <input type="file" accept="application/pdf" />
+	        <br />
+	        
+	        <select>
+	        	<option value="1">1</option>
+	        	<option value="2">2</option>
+	        	<option value="3">3</option>
+	        </select>
+	        <br />
+	        
+	        <textarea rows="3" cols="20"></textarea>
+        </div>
+	</body>
+</html>

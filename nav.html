@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/css.css" />
+		<style>
+			/*竖线*/
+			.d_navS{
+			    width: 40%;
+			    background: aquamarine;
+			}
+		    .d_navS a{
+			    display: block;
+			    margin: 0 20px;
+			    border-top: 1px solid #fff;
+			    position: relative;
+			    height: 50px;
+			    font-size: 15px;
+			    line-height: 50px;
+			    color: #fff;
+			}
+			.d_navS li.active{
+				background: #9f203c;
+			}
+			.d_navS li:hover{
+				background: #9f203c;
+			}
+			.d_navS a span{
+			    border-right: 1px solid #fff;
+			    border-bottom: 1px solid #fff;
+			    display: inline-block;
+			    transform: rotate(-45deg);
+			    -webkit-transform: rotate(-45deg);
+			    -moz-transform: rotate(-45deg);
+			    -ms-transform: rotate(-45deg);
+			    -o-transform: rotate(-45deg);
+			    width: 10px;
+			    height: 10px;
+			    position: absolute;
+			    top: 0;
+			    bottom: 0;
+			    margin: auto 0;
+			    right: 3px;
+			}
+			
+			/*等距离*/
+			.d_navHX{
+			    background: #013b85;
+    			line-height: 60px;
+    			width: 90%;
+			}
+			.d_navHX li{
+			    float: left;
+			}
+			.d_navHX li a{
+			    display: inline-block;
+			    height: 60px;
+			    color: #f7f9fb;
+			    padding: 0px 28px;
+			    font-size: 17px;
+			    line-height: 60px;
+			    float: left;
+			}
+			.d_navHX li:first-child a {
+			    padding-left: 50px;
+			}
+			.d_navHX li:last-child a{
+				padding-right: 50px;
+			}
+			.d_navHX li a:hover{
+				background: #9E203B
+			}
+			.d_navHX li a.active{
+				background: #9E203B
+			}
+			.d_navHX li span{
+				color: #fff;
+			    font-size: 20px;
+			    vertical-align: middle;
+			    display: inline-block;
+			    height: 35px;
+			    line-height: 60px;
+			    border-left: 1px solid #fff;
+			}
+			
+
+			/*等距离鸡肋*/
+			.d_navHXL{
+			    border-bottom: 2px solid #FFFFFF;
+			    line-height: 50px;
+			    margin: 0 11px;
+			    background: cornflowerblue;
+			}
+			.d_navHXL li{
+			    float: left;
+			}
+			.d_navHXL li a{
+			    display: inline-block;
+			    font-size: 18px;
+			    color: #fff;
+			}
+			.d_navHXL li span{
+			    display: inline-block;
+			    color: #fff;
+			    width: 2px;
+			    padding: 0px 14px 0px 5px;
+			}
+			.d_navHXL a:hover{
+				background: dodgerblue;
+			}
+			
+			/*等宽导航*/
+			.d_navHW{
+			    border-bottom: 2px solid #FFFFFF;
+			    line-height: 50px;
+			    background: chocolate;
+			}
+			.d_navHW li{
+			    float: left;
+			    width: 20%;
+			}
+			.d_navHW li a{
+			    display: block;
+			    font-size: 18px;
+			    text-align: center;
+			    color: #fff;
+			}
+			.d_navHW li a:hover{
+				background: brown;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			分为横屏、竖屏
+			分为同一个页面、不同页面
+			分为a样式全，a不全，a:display-inline-block,padding,可以实现竖着的时候padding-left
+		-->
+		
+		<!--同一个页面-->
+		<!--竖屏	-->
+		<ul class="d_navS">
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-tuijian"></i>热门推荐<span></span></a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-keji"></i>新科技概念<span></span></a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-ie"></i>互联网概念<span></span></a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-shuben"></i>新文化教育概念<span></span></a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-yiliao"></i>新医疗概念<span></span></a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-huanbao"></i>新环保概念<span></span></a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-jinrong"></i>金融概念<span></span></a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-gudongchengyuan"></i>知名股东<span></span></a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank"><i class="iconfont icon-jinrong1"></i>跟投 PE / VC<span></span></a>
+			</li>
+		</ul>
+		
+		<!--横屏
+			等间距带线
+		a:display:block;float:left;为了和线之间没有距离；height:行高;；为了滑动效果;padding:0 30px;等间距
+		span:display:inline-block;vertical-align:middle;为了竖线一直居中
+		li:float:left;
+		li:first-child a:padding-left:35px;li:child-child a:padding-right:35px;为了左右对称滑动可以有效果
+		-->
+		<ul class="d_navHX clearfix m20">
+			<li>
+				<a href="javascript:;void(0)" target="_blank">要闻  </a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">快讯 </a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">自选资讯 </a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">挂牌公司 </a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">热点企业 </a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">市场 </a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">宏观</a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">原创 </a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">政策法规 </a>
+				<span></span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">财务播报 </a>
+			</li>
+		</ul>
+		
+
+		<!--横屏
+			等间距带线二级比较鸡肋
+			这样多个导航换行后，导航的字没有距离
+		a:display:inline-block;不考虑滑动效果的二级
+		span:display:inline-block;padding:0 10px 0 14px;用span竖线左右都有距离；
+		li:float:left;
+		ul:line-height
+		-->
+		
+		<ul class="d_navHXL clearfix">
+			<li>
+				<a href="javascript:;void(0)" target="_blank">3D打印</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">大数据</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">工业4.0</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">机器人</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">光通信</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">军工</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">三网融合</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">生物识别</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">物联网</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">信息安全</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">虚拟现实</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">云计算</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">智慧城市</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">智能家居</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">智能建筑</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">无人机</a>
+				<span>|</span>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">人工智能</a>
+			</li>
+		</ul>
+		
+		<!--等宽导航-->
+		<ul class="d_navHW clearfix m20">
+			<li>
+				<a href="javascript:;void(0)" target="_blank">要闻  </a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">快讯 </a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">自选资讯 </a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">挂牌公司 </a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">热点企业 </a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">市场 </a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">宏观</a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">原创 </a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">政策法规 </a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">财务播报 </a>
+			</li>
+		</ul>
+	</body>
+</html>

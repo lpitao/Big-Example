@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/css.css" />
+		<style>
+			.d_blue_footer{
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
+			.d_blue_footer ul{
+				padding: 0 20px;
+				background: #003360;
+				width: 100%;
+			}
+			.d_blue_footer ul li{
+				float: left;
+				width: 25%;
+			}
+			.d_blue_footer ul li a{
+				display: block;
+				height: 45px;
+				line-height: 45px;
+				text-align: center;
+				position: relative;
+			}
+			.d_jiantou{
+			    width: 13px;
+			    height: 13px;
+			    margin-top: -3px;
+			    border-bottom: 1px solid #ccc;
+			    border-left: 1px solid #ccc;
+			    -webkit-transform: translate(-50%,-50%) rotate(-45deg);
+			    -moz-transform: translate(-50%,-50%) rotate(-45deg);
+			    -o-transform: translate(-50%,-50%) rotate(-45deg);
+			    -ms-transform: translate(-50%,-50%) rotate(-45deg);
+			    position: absolute;
+			    left: 50%;
+			    top: 50%;
+			}
+			.d_blue_footer .d_smaBlock_middle{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			
+			.d_blue_footer .d_fangkuang{
+				width: 15px;
+				height: 15px;
+				border: 1px solid #ccc;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.d_blue_footer .d_sanjiao{
+				width: 15px;
+				height: 15px;
+				border: 1px solid #668096;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+			}
+			.d_blue_footer .d_quan{
+				width: 15px;
+				height: 15px;
+				border: 1px solid #668096;
+				border-radius: 50%;
+				-webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+				-o-border-radius: 50%;
+				-moz-border-radius: 50%;
+			}
+			.d_blue_footer .triangle_border_left{
+			    width: 0;
+			    height: 0;
+			    border-width: 10px 15px 10px 0;
+			    border-style: solid;
+			    border-color: transparent #668096 transparent transparent;
+			    position: relative;
+			}
+			.d_blue_footer .triangle_border_left span{
+			    display: block;
+			    width: 0;
+			    height: 0;
+			    border-width: 7px 12px 7px 0;
+			    border-style: solid;
+			    border-color: transparent #003360 transparent transparent;
+			    position: absolute;
+			    top: -7px;
+			    left: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="d_blue_footer">
+			<ul class="clearfix">
+				<li>
+					<a href="javascript:;">
+						<div class="d_jiantou"></div>
+					</a>			
+				</li>
+				<li>
+					<a href="javascript:;">
+						<div class="d_fangkuang"></div>
+					</a>				
+				</li>
+				<li>
+					<a href="javascript:;">
+						<div class="d_quan d_smaBlock_middle"></div>
+					</a>				
+				</li>
+				<li>
+					<a href="javascript:;">
+						<div class="triangle_border_left d_smaBlock_middle">
+						    <span></span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

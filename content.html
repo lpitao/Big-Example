@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/css.css" />
+		<style>
+			/*有图、题目、段落*/
+			.d_conHeadImg li{
+				border-bottom: 1px dashed #CCCCCC;
+			    margin: 10px 0;
+			    padding-bottom: 10px;
+			}	
+			.d_conHeadImg li:last-child{
+				border-bottom: none;
+			}		
+			.d_conHeadImg_tu{
+			    float: left;
+			    width: 170px;
+			    height: 92px;
+			}
+			.d_conHeadImg_tu img{
+			    width: 100%;
+			    height: 100%;
+			}
+			.d_conHeadImg_zi{
+				float: right;
+			    width: 72%;
+			}
+			.d_conHeadImg_zi  h4 a{
+			    color: #000;
+			    display: block;
+			    white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    height: 40px;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 40px;
+			}
+			.d_conHeadImg_zi h4 a:hover{
+				text-decoration: underline;
+			}
+			.d_conHeadImg_zi h4 a span{
+			    float: right;
+			    color: #999;
+			    width: 160px;
+			    text-align: center;
+			    font-size: 12px;
+			    line-height: 28px;
+			}
+			.d_conHeadImg_zi p{
+			    line-height: 21px;
+			    color: #323232;
+			    height: 45px;
+			    text-overflow: ellipsis;
+			    overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-box-orient: vertical;
+			    -webkit-line-clamp: 2;
+			    text-indent: 29px;
+			}
+			
+			/*有题目段落*/
+			.d_conHead li{
+			    overflow: hidden;
+			    margin-bottom: 10px;
+			    padding: 0px 0px 10px 10px;
+			    border-bottom: 1px dotted #D2D2D2;
+			}
+			.d_conHead li:last-child{
+			    margin-bottom: 0px;
+			    padding: 0px 0px 0px 10px;
+			    border-bottom: none;
+			}
+			.d_conHead_con{
+				width: 100%;
+			}
+			
+			.d_conHead_con a:hover{
+				text-decoration: underline;
+			}
+			.d_conHead_con h4 a {
+			    color: #000;
+			    display: block;
+			    white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    height: 40px;
+			    font-size: 16px;
+			    font-weight: 700;
+			    line-height: 40px;
+			}
+			.d_conHead_con p{
+			    line-height: 21px;
+			    color: #323232;
+			    height: 24px;
+			    text-overflow: ellipsis;
+			    overflow: hidden;
+			    display: -webkit-box;
+			    -webkit-box-orient: vertical;
+			    -webkit-line-clamp: 2;
+			}
+			
+			/*有图介绍*/
+			.d_conImg{
+			    margin-bottom: 15px;
+			}
+			.d_conImg li{
+			    width: calc(25% - 8px);
+			    margin-right: 10px;
+			    border: 1px solid #E1E1E1;
+			    float: left;
+			    height: 135px;
+			    position: relative;
+		        padding: 0 10px;
+		        margin-bottom: 10px;
+			}	
+			.d_conImg li:nth-child(4n){
+				float: right;
+				margin-right: 0px;
+			}
+			
+			.d_conImg .d_conImg_Tu,.d_conImg .d_conImg_Zi {
+				position: absolute;
+				bottom: 0;
+				top: 0;
+				margin: auto 0;
+				height: 105px;
+			}
+			.d_conImg .d_conImg_Tu {
+			    width: 160px;
+			}
+			.d_conImg .d_conImg_Tu a{
+			    display: block;
+			    height: 100%;
+			}
+			.d_conImg .d_conImg_Tu span{
+			    position: absolute;
+			    bottom: 0;
+			    left: 0;
+			    background: rgba(240,48,57,.56);
+			    color: #fff;
+			    font-size: 12px;
+			    text-align: center;
+			    height: 20px;
+			    line-height: 20px;
+			    width: 48%;
+			}
+			
+			.d_conImg .d_conImg_Zi {
+			    width: 31%;
+		        right: 0;
+			}
+			.d_conImg .d_conImg_Zi span{
+				font-size: 12px;
+				color: #C8C5C8;
+			}
+			.d_conImg .d_conImg_Zi a{
+			    display: inline-block;
+			    height: 30px;
+			    line-height: 30px;
+			    font-size: 17px;
+			}
+			.d_conImg .d_conImg_Zi a:hover{
+				text-decoration: underline;
+			}
+			/*有点的Li样式的*/
+			.d_conLiDot{
+			    width: 60%;
+    			margin: 0 auto;
+			}
+			.d_conLiDot li{
+				color: #222;
+			    font-size: 16px;
+			    border-bottom: 1px solid #e0e0e0;
+			    line-height: 40px;
+			}
+			.d_conLiDot li span{
+			    width: 5px;
+			    height: 5px;
+			    border-radius: 50%;
+			    background: #f8822b;
+			    display: inline-block;
+			    vertical-align: middle;
+			    margin-right: 17px;
+			}
+			.d_conLiDot li a{
+				display: block;
+			}
+			.d_conLiDot li:hover{
+				box-shadow: 0px 4px 10px -4px rgba(0,0,0,.1);
+			}
+			/*有背景图Li样式的*/
+			.d_conLiImg{
+			    width: 60%;
+    			margin: 0 auto;
+			}
+			.d_conLiImg li{
+				color: #222;
+			    font-size: 16px;
+			    border-bottom: 1px solid #e0e0e0;
+			    line-height: 40px;
+			}
+			.d_conLiImg li a{
+			    display: block;
+			    background-image: url(images/radio.png);
+			    background-repeat: no-repeat;
+			    background-size: 10px 10px;
+			    background-position: left center;
+			    padding-left: 22px;
+			}
+			.d_conLiImg li:hover{
+				box-shadow: 0px 4px 10px -4px rgba(0,0,0,.1);
+			}
+			/*有beforeLi样式的*/
+			.d_conLiBefore{
+			    width: 60%;
+    			margin: 0 auto;
+			}
+			.d_conLiBefore li{
+				color: #222;
+			    font-size: 16px;
+			    border-bottom: 1px solid #e0e0e0;
+			    line-height: 40px;
+			}
+			.d_conLiBefore li a{
+			    display: inline-block;
+			}
+			.d_conLiBefore li a:before{
+			    content: "☕";
+			    font-size: 12px;
+			    text-align: center;
+			    color: chocolate;
+			}
+			.d_conLiBefore li:after{
+		        content: "";
+			    width: 20px;
+			    background-image: url(images/money.png);
+			    background-repeat: no-repeat;
+			    background-size: 20px 25px;
+			    height: 25px;
+			    display: inline-block;
+			    vertical-align: middle;
+			}
+			
+			.d_conLiBefore li:hover{
+				box-shadow: 0px 4px 10px -4px rgba(0,0,0,.1);
+				
+			}
+			.d_conLiBefore li:hover:after{
+				animation: rock .5s;
+				-webkit-animation: rock .5s;
+			}
+			@keyframes rock {
+				25%{transform: rotate(45deg)}
+				50%{transform: rotate(0deg)}
+				75%{transform: rotate(-45deg)}
+			}
+			@-webkit-keyframes rock {
+				25%{transform: rotate(45deg)}
+				50%{transform: rotate(0deg)}
+				75%{transform: rotate(-45deg)}
+			}
+			
+			/*带珠子的li*/
+			.d_conZhuzhu{
+				/*border: 1px solid #E8EAEC;*/
+				width: 60%;
+				margin: 20px auto;
+			}
+			.d_conZhuzhu li{
+				border-left: 1px solid #E8EAEC;
+				height: 40px;
+				line-height: 40px;
+				position: relative;
+				padding-left: 20px;
+				z-index: 1;
+			}
+			.d_conZhuzhu li a{
+				font-size: 18px;
+			}
+			.d_conZhuzhu li em{
+				border: 2px solid #E8EAEC;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				display: inline-block;
+				position: absolute;
+				left: -6px;
+				top: 0;
+				bottom: 0;
+				margin: auto 0;
+				z-index: 2;
+				background: #fff;
+			}
+			.d_conZhuzhu li a:hover{
+				color: #E22627;
+			}
+			.d_conZhuzhu li:hover em{
+				background: #E22627;
+				border: 1px solid #E22627;	
+			}
+		</style>
+	</head>
+	<body style="min-height: 3000px;">		
+		<!--有图、题目、段落-->
+    	<ul class="d_conHeadImg m20" >
+            <li class="clearfix">
+                <div class="d_conHeadImg_tu">
+                	<a href="javascript:;void(0)"><img src="images/ces.jpg"></a>
+                </div>
+                <div class="d_conHeadImg_zi">           
+                    <h4> <a href="javascript:;void(0)">游学行业海量空间，B端王者价值凸显<span>2017-9-17</span></a></h4>
+                    <p>游学行业海量空间，B端王者价值凸显业股份转让系统公开转让说明书内容与格式指引小企业股份转让系统公开转让说明书内容与格式指引认公关于补充确认关于补充确认关于补充确认司关联交易的公</p>
+                </div>
+            </li>
+            <li class="clearfix">
+                <div class="d_conHeadImg_tu">
+                	<a href="javascript:;void(0)"><img src="images/ces.jpg"></a>
+                </div>
+                <div class="d_conHeadImg_zi">           
+                    <h4> <a href="javascript:;void(0)">游学行业海量空间，B端王者价值凸显<span>2017-9-17</span></a></h4>
+                    <p>游学行业海量空间，B端王者价值凸显业股份转让系统公开转让说明书内容与格式指引小企业股份转让系统公开转让说明书内容与格式指引认公关于补充确认关于补充确认关于补充确认司关联交易的公</p>
+                </div>
+            </li>
+        </ul>
+		
+		<!--有题目段落-->
+		<ul class="d_conHead m20">
+            <li>
+                <div class="d_conHead_con">
+                    <h4><a href="javascript:;void(0)">【做市商制】新三板企业变更做市热情减退</a> </h4>
+                    <p>于补充确认公关于补充确认关于补充确认关于补充确认司关联交易的公于补充确认公关于补充确认关于补充确认关于补充确认司关联交易的公于补充确小企业股份转让系统公开转让说明书内容与格式指引小企业股份转让系统公开转让说明书内容与格式指引认公关于补充确认关于补充确认关于补充确认司关联交易的公</p>
+                </div>
+            </li>
+            <li>
+                <div class="d_conHead_con">
+                    <h4><a href="javascript:;void(0)">【做市商制】新三板企业变更做市热情减退</a> </h4>
+                    <p>于补充确认公关于补充确认关于补充确认关于补充确认司关联交易的公于补充确认公关于补充确认关于补充确认关于补充确认司关联交易的公于补充确小企业股份转让系统公开转让说明书内容与格式指引小企业股份转让系统公开转让说明书内容与格式指引认公关于补充确认关于补充确认关于补充确认司关联交易的公</p>
+                </div>
+            </li>
+        </ul>
+        
+		<!--有图和介绍-->
+		<ul class="d_conImg clearfix">
+			<li class="clearfix">
+				<div class="d_conImg_Tu">
+					<a href="javascript:;void(0)"><img src="images/ces.jpg"/></a>
+					<span>7人观看</span>
+				</div>
+				<div class="d_conImg_Zi">
+					<span>2017-12-18</span>
+					<a href="javascript:;void(0)">博成能源</a>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="d_conImg_Tu">
+					<a href="javascript:;void(0)"><img src="images/ces.jpg"/></a>
+					<span>7人观看</span>
+				</div>
+				<div class="d_conImg_Zi">
+					<span>2017-12-18</span>
+					<a href="javascript:;void(0)">博成能源</a>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="d_conImg_Tu">
+					<a href="javascript:;void(0)"><img src="images/ces.jpg"/></a>
+					<span>7人观看</span>
+				</div>
+				<div class="d_conImg_Zi">
+					<span>2017-12-18</span>
+					<a href="javascript:;void(0)">博成能源</a>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="d_conImg_Tu">
+					<a href="javascript:;void(0)"><img src="images/ces.jpg"/></a>
+					<span>7人观看</span>
+				</div>
+				<div class="d_conImg_Zi">
+					<span>2017-12-18</span>
+					<a href="javascript:;void(0)">博成能源</a>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="d_conImg_Tu">
+					<a href="javascript:;void(0)"><img src="images/ces.jpg"/></a>
+					<span>7人观看</span>
+				</div>
+				<div class="d_conImg_Zi">
+					<span>2017-12-18</span>
+					<a href="javascript:;void(0)">博成能源</a>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="d_conImg_Tu">
+					<a href="javascript:;void(0)"><img src="images/ces.jpg"/></a>
+					<span>7人观看</span>
+				</div>
+				<div class="d_conImg_Zi">
+					<span>2017-12-18</span>
+					<a href="javascript:;void(0)">博成能源</a>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="d_conImg_Tu">
+					<a href="javascript:;void(0)" ><img src="images/ces.jpg"/></a>
+					<span>7人观看</span>
+				</div>
+				<div class="d_conImg_Zi">
+					<span>2017-12-18</span>
+					<a href="javascript:;void(0)">博成能源</a>
+				</div>
+			</li>
+			<li class="clearfix">
+				<div class="d_conImg_Tu">
+					<a href="javascript:;void(0)"><img src="images/ces.jpg"/></a>
+					<span>7人观看</span>
+				</div>
+				<div class="d_conImg_Zi">
+					<span>2017-12-18</span>
+					<a href="javascript:;void(0)">博成能源</a>
+				</div>
+			</li>
+		</ul>
+        <!--li样式的-->
+		span画圆点
+		<ul class="d_conLiDot">
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					<span></span>enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					<span></span>enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					<span></span>enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+		</ul>
+		<!--a标签直接带background-img-->
+		background-img
+		<ul class="d_conLiImg">
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+		</ul>
+		<!--a标签before-->
+		before
+		<ul class="d_conLiBefore">
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">
+					enjoy enjoy enjoy enjoy
+				</a>
+			</li>
+		</ul>
+		 <!--带珠子的li-->
+		<ul class="d_conZhuzhu">
+			<li>
+				<a href="javascript:;void(0)" target="_blank">新型健身品牌超级猩猩完成数亿元C轮融资</a>
+				<em></em>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">新型健身品牌超级猩猩完成数亿元C轮融资</a>
+				<em></em>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">新型健身品牌超级猩猩完成数亿元C轮融资</a>
+				<em></em>
+			</li>
+			<li>
+				<a href="javascript:;void(0)" target="_blank">新型健身品牌超级猩猩完成数亿元C轮融资</a>
+				<em></em>
+			</li>
+		</ul>
+		
+		
+	</body>
+</html>
