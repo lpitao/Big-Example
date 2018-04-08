@@ -5,6 +5,13 @@
 		<title></title>
 		<link rel="stylesheet" href="css/css.css" />
 		<style>
+		
+			/*1、a、width:style="table-layout:fixed;确定更改width内容  
+			  b、max-width,相对缩减内容
+			2、tr border没用
+			3、单独某列左对齐：.d_tl td:firstChild{text-align:left}
+			4、tbody垂直上对其：<tbody valign='top'>
+			5、tbody滚动条：a、tbody一个操作.b、thead, tbody tr操作固定下来，不能table固定下来*/
 			
 			.d_tableA table tr{
 				border-bottom: #9f203c solid 1px;
@@ -138,14 +145,7 @@
 		</style>
 	</head>
 	<body>
-		<!--
-			1、a、width:style="table-layout:fixed;确定更改width内容  
-			  b、max-width,相对缩减内容
-			2、tr border没用
-			3、单独某列左对齐：.d_tl td:firstChild{text-align:left}
-			4、tbody垂直上对其：<tbody valign='top'>
-			5、tbody滚动条：a、tbody一个操作.b、thead, tbody tr操作
-		-->
+		
 		<div class="d_tableA">
 			<table style="table-layout:fixed;"cellpadding="0" cellspacing="0">
 				<thead>
